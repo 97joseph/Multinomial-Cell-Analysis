@@ -20,3 +20,10 @@ Competition host Open Problems in Single-Cell Analysis is an open-source, commun
 There are approximately 37 trillion cells in the human body, all with different behaviors and functions. Understanding how a single genome gives rise to a diversity of cellular states is the key to gaining mechanistic insight into how tissues function or malfunction in health and disease. You can help solve this fundamental challenge for single-cell biology. Being able to solve the prediction problems over time may yield new insights into how gene regulation influences differentiation as blood and immune cells mature.
 
 Competition header image by Pawel Czerwinski on Unsplash
+
+We use the Pearson correlation coefficient to rank submissions. For each observation in the Multiome data set, we compute the correlation between the ground-truth gene expressions and the predicted gene expressions. For each observation in the CITEseq data set, we compute the correlation between ground-truth surface protein levels and predicted surface protein levels. The overall score is the average of each sample's correlation score. If a sample's predictions are all the same, the correlation for that sample is scored as -1.0.
+
+Submission File
+
+For each id in the evaluation set, you should predict a target value for that row_id. Your submission should contain a header and have the following format:
+
